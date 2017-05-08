@@ -1,0 +1,839 @@
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*--------------------------------------------------------------
+## Font Styles
+--------------------------------------------------------------*/
+
+html {font-size: 1em;}
+
+body {
+  background-color: white;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.45;
+  color: #3B4650;
+}
+
+/*p {margin-bottom: 1.3em;}*/
+
+h1 {
+  margin-top: 0;
+  font-size: 2.074em;
+}
+
+h2 {font-size: 1.728em;}
+
+h3 {font-size: 1.44em;}
+
+h4 {font-size: 1.2em;}
+
+small, .font_small {font-size: 0.833em;}
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+    color: #3B4650;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+    text-decoration: none;
+}
+
+a:visited {
+	color: #3B4650;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #337ab7;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+## General Colors
+--------------------------------------------------------------*/
+
+.light-background {
+    background-color: #f4faf8;
+    color: #3B4650;
+}
+
+.medium-background {
+    background-color: #E9F2EE;
+    color: #3B4650;
+}
+
+.dark-background {
+    background-color: #3B4650;
+    color: #f4faf8;
+}
+
+.button-light {
+    background-color: #f4faf8;
+    color: #3B4650;
+    text-transform: uppercase;
+    padding:10px;
+}
+
+.button-blue {
+    cursor: pointer;
+    background-color: #14aec9;
+    color: white;
+    padding: 3px 6px;
+    text-align: center;
+    font-family: sans-serif;
+    border: 1px solid #14aec9;
+}
+
+/*--------------------------------------------------------------
+## Global Styles - All Breakpoints
+--------------------------------------------------------------*/
+
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.hero-image h1 {
+    font-size: 25px;
+    color: #f4faf8;
+    border: 5px solid #f4faf8;
+    padding: 5px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.hero-image p {
+    font-size: 14px;
+    font-weight: lighter;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: #f4faf8;
+    margin-bottom: 10px;
+}
+
+.definition-aside {
+    padding: 50px 15px;
+    font-size: 12px;
+}
+
+.definition-title {
+    font-weight: bold;
+}
+
+.definition-pronunciation {
+    font-style:italic;
+    font-weight: 200;
+}
+
+.content-headline {
+    font-size: 24px;
+    text-align: center;
+}
+
+hr {
+    max-width: 50px;
+    border-color: #f4faf8;
+    border-width: 3px;
+}
+
+footer {
+    border-top: 1px solid #efefef;
+    padding: 30px;
+
+}
+
+footer .copyright {
+    padding-top: 30px;
+    text-align: center;
+    border-top: 1px solid #efefef;
+    color: #aaaaaa;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+/*--------------------------------------------------------------
+## Responsive Breakpoints -- Mobile First
+--------------------------------------------------------------*/
+
+
+@media only screen and (max-width: 568px){
+    .container {
+        max-width: 568px;
+        width: 100%;
+    }
+
+    header {
+        max-width: 568px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        height: 50px;
+    }
+
+    logo-name {
+        background-color: #f4faf8;
+        text-transform: capitalize;
+        font-size: 14px;
+    }
+
+    .responsive-hamburger {
+        margin-right: -200px;
+        padding: 3px 10px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        background-color: transparent;
+        background-image: none;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 20px;
+    }
+
+    .responsive-hamburger:focus, .responsive-hamburger:hover {
+        background-color: #ddd;
+    }
+
+    .hero-image {
+        margin-top: 50px;
+        height: 207px;
+        background-image: url("https://barbiereslc.com/img/BarbSLC-6.jpg");
+        background-size:cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .hero-image h1 {
+
+    }
+
+    .hero-image p {
+
+    }
+
+    .contact-information {
+        height: 600px;
+        width: 100%;
+        padding: 50px 15px;
+        font-size: 12px;
+    }
+
+    .address-section-title {
+        font-weight: bold;
+    }
+
+    address.contactPhone_hours {
+        margin-top: 15px;
+    }
+
+    .ourHistory {
+        margin-top: 15px;
+    }
+
+    .map {
+        margin-top: 15px;
+    }
+
+    .address-right-panel {
+        display: none;
+    }
+
+    .button-light {
+        font-size: 12px;
+    }
+
+    .now-hiring {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .book-appointment {
+        padding: 50px 15px;
+        height: 210px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .button-blue {
+        font-size: 12pt;
+        width: 170px;
+        margin: 0 auto;
+
+    }
+
+    .contact-methods {
+        padding: 50px 15px;
+        text-align: center;
+    }
+
+    .contact-methods .social-media-icon {
+        font-size: 50px;
+        margin-top: 10px;
+    }
+
+    .social-media-icon i {
+
+    }
+
+
+    .contact-links i:hover {
+        background-color: #14aec9;
+    }
+
+    .contact-methods .social-media-label {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .appointment-window-placeholder p {
+        display: none;
+    }
+
+    ul.top-nav li.nav-item {
+        display: none;
+    }
+
+    footer {
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+}
+
+/*--------------------------------------------------------------
+## Responsive Breakpoints -- Tablet Next (IPad 2)
+--------------------------------------------------------------*/
+
+@media only screen
+  and (min-width: 569px)
+  and (max-width: 1024px)
+ {
+
+    .container {
+        max-width: 1024px;
+        width: 100%;
+    }
+
+    header {
+        max-width: 1024px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        height: 50px;
+    }
+
+    logo-name {
+        background-color: #f4faf8;
+        text-transform: capitalize;
+        font-size: 14px;
+    }
+
+    .responsive-hamburger {
+        display: none;
+    }
+
+    .responsive-hamburger:focus, .responsive-hamburger:hover {
+        background-color: #ddd;
+    }
+
+    ul.top-nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    ul.top-nav li.nav-item {
+        display: inline-block;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-right: 25px;
+    }
+
+    .hero-image {
+        margin-top: 50px;
+        height: 500px;
+        background-image: url("https://barbiereslc.com/img/BarbSLC-6.jpg");
+        background-size:cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .hero-image h1 {
+        font-size: 85px;
+        font-weight: bold;
+        color: #f4faf8;
+        border: 10px solid #f4faf8;
+        padding: 5px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    .hero-image p {
+        font-size: 14px;
+        font-weight: lighter;
+        letter-spacing: 20px;
+        text-transform: uppercase;
+        color: #f4faf8;
+        margin-bottom: 10px;
+    }
+
+    .book-an-appt-btn {
+        width: 300px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px
+    }
+
+    .definition-aside {
+        display: flex;
+        flex-flow:column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .definition {
+        width: 400px;
+        font-size: 18px;
+    }
+
+    .contact-information {
+        height: 600px;
+        width: 100%;
+        padding: 50px 15px;
+        font-size: 12px;
+    }
+
+    .address-contact-box {
+        width: 90%;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .address-left-panel {
+        flex-grow: 1;
+    }
+
+
+
+    .address-section-title {
+        font-weight: bold;
+    }
+
+    address.contactPhone_hours {
+        margin-top: 15px;
+    }
+
+    .ourHistory {
+        margin-top: 15px;
+    }
+
+    .map {
+        margin-top: 15px;
+    }
+
+    .address-right-panel {
+        flex-grow: 1;
+        margin-left: 50px;
+    }
+
+    .shop-photo {
+        max-width: 600px;
+        width: 100%;
+        height: auto;
+    }
+
+
+    .now-hiring {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .book-appointment {
+        padding: 50px 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .appointment-window-placeholder {
+        background-color: #fff;
+        color: #3B4650;
+    }
+
+    .appointment-window-placeholder p {
+        margin: 10px 0;
+    }
+
+
+
+    .button-blue {
+        display: none;
+
+    }
+
+    .contact-methods {
+        padding: 50px 15px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .contact-methods .social-media-icon {
+        font-size: 50px;
+        margin-top: 10px;
+    }
+
+    .contact-methods ul {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+
+    }
+
+    .contact-methods ul li {
+        width: 200px;
+        margin-right: 50px;
+        margin-bottom: 50px;
+    }
+
+    .social-media-icon i {
+
+    }
+
+
+    .contact-links i:hover {
+        background-color: #14aec9;
+    }
+
+    .contact-methods .social-media-label {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+
+
+    footer {
+        font-size: 10px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+}
+
+/*--------------------------------------------------------------
+## Responsive Breakpoints -- Desktop First
+--------------------------------------------------------------*/
+
+@media screen
+  and (min-device-width: 1025px){
+
+    .container {
+        width: 100%;
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        height: 50px;
+    }
+
+    logo-name {
+        background-color: #f4faf8;
+        text-transform: capitalize;
+        font-size: 14px;
+    }
+
+    .responsive-hamburger {
+        display: none;
+    }
+
+    .responsive-hamburger:focus, .responsive-hamburger:hover {
+        background-color: #ddd;
+    }
+
+    ul.top-nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    ul.top-nav li.nav-item {
+        display: inline-block;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-right: 25px;
+    }
+
+    .hero-image {
+        margin-top: 50px;
+        height:700px;
+        background-image: url("https://barbiereslc.com/img/BarbSLC-6.jpg");
+        background-size:cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .hero-image h1 {
+        font-size: 85px;
+        font-weight: bold;
+        color: #f4faf8;
+        border: 10px solid #f4faf8;
+        padding: 5px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    .hero-image p {
+        font-size: 14px;
+        font-weight: lighter;
+        letter-spacing: 20px;
+        text-transform: uppercase;
+        color: #f4faf8;
+        margin-bottom: 10px;
+    }
+
+    .book-an-appt-btn {
+        width: 300px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px
+    }
+
+    .definition-aside {
+        display: flex;
+        flex-flow:column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .definition {
+        width: 400px;
+        font-size: 18px;
+    }
+
+    .contact-information {
+        height: auto;
+        width: 100%;
+        padding: 50px 15px;
+        font-size: 12px;
+    }
+
+    .address-contact-box {
+        width: 90%;
+        display: flex;
+        margin: 50px auto;
+        justify-content: center;
+    }
+
+    .address-left-panel {
+        width:500px;
+        font-size: 18px;
+    }
+
+
+    .address-section-title {
+        font-weight: bold;
+    }
+
+    address.contactPhone_hours {
+        margin-top: 15px;
+    }
+
+    .ourHistory {
+        margin-top: 15px;
+    }
+
+    .map {
+        margin-top: 15px;
+        max-width: 500px
+    }
+
+    .address-right-panel {
+        margin-left: 50px;
+        width: 500px;
+    }
+
+    .shop-photo {
+        max-width: 600px;
+        width: 100%;
+        height: auto;
+    }
+
+
+    .now-hiring {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .book-appointment {
+        padding: 50px 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .appointment-window-placeholder {
+        background-color: #fff;
+        color: #3B4650;
+    }
+
+    .appointment-window-placeholder p {
+        margin: 10px 0;
+    }
+
+
+
+    .button-blue {
+        display: none;
+
+    }
+
+    .contact-methods {
+        padding: 50px 15px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .contact-methods .social-media-icon {
+        font-size: 50px;
+        margin-top: 10px;
+    }
+
+    .contact-methods ul {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 50px auto;
+        justify-content: center;
+    }
+
+    .contact-methods ul li {
+        width: 300px;
+        margin-right: 50px;
+        margin-bottom: 50px;
+    }
+
+    .social-media-icon i {
+
+    }
+
+
+    .contact-links i:hover {
+        background-color: #14aec9;
+    }
+
+    .contact-methods .social-media-label {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+
+
+    footer {
+        font-size: 10px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .appointment-window-placeholder {
+        width: 635px;
+        height: 489px;
+    }
+
+}
